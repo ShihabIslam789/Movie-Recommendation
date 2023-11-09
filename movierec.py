@@ -10,11 +10,13 @@ from sklearn.metrics.pairwise import cosine_similarity
 
 movies_data = pd.read_csv('movies.csv')
 
+# prints the first 5 rows if the dataframe
 movies.data.head()
 
+# total amount of rows and columns
 movies_data.shape
 
-
+#select specific features
 selected_features = ['generes','keywords','tagline','cast','director']
 print(selected_features)
 

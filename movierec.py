@@ -20,5 +20,16 @@ movies_data.shape
 selected_features = ['generes','keywords','tagline','cast','director']
 print(selected_features)
 
+# replacing the null values with null string
 for feature in selected_features:
     movies_data[feature] = movies_data[feature].fillna('')
+
+# combining all the 5 selected features
+
+combined_features = movies_data['genres']+' '+movies_data['keywords']+' '+movies_data['tagline']+' '+movies_data['cast']+' '+movies_data['director']
+
+print(combined_features)
+
+# converting the text data to feature vectors
+
+vectorizer = TfidfVectorizer()
